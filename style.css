@@ -1,0 +1,43 @@
+/*body {*/
+/*    background: linear-gradient(89.79deg, rgba(182, 69, 238, 0.92) 0.19%, rgba(114, 115, 245, 0.92) 83.8%, rgba(25, 175, 255, 0.92) 115.48%);*/
+/*}*/
+
+.avatar img {
+    border-radius: 64px;
+}
+
+.products-logos {
+    margin-bottom: 8px;
+}
+
+.products-logos img {
+    height: 24px;
+    width: auto;
+}
+
+.products-logos img:nth-child(1) {
+    margin-right: 8px;
+}
+
+.telegram-link {
+    display: block;
+    float: left;
+}
+
+.telegram-link:before {
+    content: "";
+    line-height: 30px;
+    display: inline-block;
+    background: url("img/telegram.svg") no-repeat top right;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+
+ul > li {
+    margin-bottom: 8px;
+}
+
+.card {
+    height: 100%;
+}
