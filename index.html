@@ -13,80 +13,135 @@
   </head>
   <body>
     <div id="app">
-      <div class="container pt-3">
-        <div v-for="e in employees">
-          <!-- ПЕРВАЯ ЛИНИЯ -->
+      <div id="header">
+        <div class="container">
           <div class="row">
-
-            <div class="d-flex">
-              <!-- АВАТАР -->
-              <div class="avatar" style="margin-right: 16px;">
-                <img :src="`https://eu.ui-avatars.com/api/?rounded=true&size=128&name=${e.name}&background=0D8ABC&color=fff`" class="img-thumbnail" alt="">
-              </div>
-
-              <div class="">
-                <!-- ИМЯ -->
-                <h1>{{e.name}}</h1>
-
-                <!-- ЛОГОТИПЫ ПРОЕКТОВ -->
-                <div class="products-logos">
-                  <img src="img/dolphin.svg" class="dolphin-logo" v-if="e.projects.dolphin"/>
-                  <img src="img/anty.svg" class="anty-logo" v-if="e.projects.anty"/>
-                </div>
-
-                <!-- ДОЛЖНОСТЬ -->
-                <h5>{{e.role}}</h5>
-
-                <!-- ССЫЛКА НА ТГ -->
-                <div>
-                  <a :href="`https://t.me/${e.telegram}`" class="telegram-link" target="_blank">
-                    @{{e.telegram}}
-                  </a>
-                </div>
-              </div>
+            <div class="col text-center">
+              <h1 class="subtitle">Dolphin Team</h1>
             </div>
           </div>
 
+          <div class="row">
+            <div class="col text-center">
+              <h1 class="title">Мы создаем нечто волшебное для наших пользователей</h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container pt-3">
+        <div v-for="e in employees">
+          <!-- ПЕРВАЯ ЛИНИЯ -->
+<!--          <div class="row">-->
+
+<!--            <div class="d-flex justify-content-between grey-box">-->
+<!--              <div class="">-->
+<!--                &lt;!&ndash; ИМЯ &ndash;&gt;-->
+<!--                <h1>{{e.name}}</h1>-->
+
+<!--                &lt;!&ndash; ДОЛЖНОСТЬ &ndash;&gt;-->
+<!--                <h5 style="color: #343434">{{e.role}}</h5>-->
+
+<!--                &lt;!&ndash; ССЫЛКА НА ТГ &ndash;&gt;-->
+<!--                <div style="display: inline-block;">-->
+<!--                  <a :href="`https://t.me/${e.telegram}`" class="telegram-link" target="_blank">-->
+<!--                    @{{e.telegram}}-->
+<!--                  </a>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; ЛОГОТИПЫ ПРОЕКТОВ &ndash;&gt;-->
+<!--                <div class="products-logos mt-3">-->
+<!--                  <img src="img/dolphin.svg" class="dolphin-logo" v-if="e.projects.dolphin"/>-->
+<!--                  <img src="img/anty.svg" class="anty-logo" v-if="e.projects.anty"/>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              &lt;!&ndash; АВАТАР &ndash;&gt;-->
+<!--              <div class="avatar">-->
+<!--                <img :src="e.avatar ? `img/${e.avatar}.png` : `https://eu.ui-avatars.com/api/?rounded=true&size=192&name=${e.name}&background=0D8ABC&color=fff` " class="img-thumbnail" alt="">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
           <!-- ВТОРАЯ ЛИНИЯ -->
-          <div class="row mt-3 mb-5">
+          <div class="row mt-3 mb-5 second-line">
+
+            <div class="col-md-3">
+              <div class="grey-box">
+                <div class="text-center">
+                  <!-- АВАТАР -->
+                  <div class="avatar">
+                    <img :src="e.avatar ? `img/${e.avatar}.png` : `https://eu.ui-avatars.com/api/?rounded=true&size=192&name=${e.name}&background=0D8ABC&color=fff` " class="img-thumbnail" alt="">
+                  </div>
+
+                  <!-- ИМЯ -->
+                  <h1>{{e.name}}</h1>
+
+                  <!-- ДОЛЖНОСТЬ -->
+                  <h5 style="color: #343434">{{e.role}}</h5>
+
+                  <!-- ССЫЛКА НА ТГ -->
+                  <div style="display: inline-block;">
+                    <a :href="`https://t.me/${e.telegram}`" class="telegram-link" target="_blank">
+                      @{{e.telegram}}
+                    </a>
+                  </div>
+
+                  <!-- ЛОГОТИПЫ ПРОЕКТОВ -->
+                  <div class="products-logos mt-3">
+                    <img src="img/dolphin.svg" class="dolphin-logo" v-if="e.projects.dolphin"/>
+                    <img src="img/anty.svg" class="anty-logo" v-if="e.projects.anty"/>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- ИНТЕРЕСЫ -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 pb-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Интересы</h5>
+                  <h4 class="card-title mb-3">
+                    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/star_2b50.png" style="width: 24px; height: auto" />
+                    интересы
+                  </h4>
                   <div class="card-text">
-                    <ul>
-                      <li v-for="item in e.interests">{{item}}</li>
-                    </ul>
+                    <div class="mb-3" v-for="item in e.interests">{{item}}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- ЛЮБЛЮ В РАБОТЕ -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 pb-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Люблю в работе</h5>
+                  <h4 class="card-title mb-3">
+                    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/star-struck_1f929.png" style="width: 24px; height: auto" />
+                    люблю в работе
+                  </h4>
                   <div class="card-text">
-                    <ul>
-                      <li v-for="item in e.likesInJob">{{item}}</li>
-                    </ul>
+                    <div class="mb-3" v-for="item in e.likesInJob">{{item}}</div>
+<!--                    <ul>-->
+<!--                      <li v-for="item in e.likesInJob">{{item}}</li>-->
+<!--                    </ul>-->
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- БЕСИТ В РАБОТЕ -->
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 pb-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Бесит в работе</h5>
+                  <h4 class="card-title mb-3">
+                    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/tired-face_1f62b.png" style="width: 24px; height: auto" />
+                    бесит в работе
+                  </h4>
                   <div class="card-text">
-                    <ul>
-                      <li v-for="item in e.hatesInJob">{{item}}</li>
-                    </ul>
+                    <div class="mb-3" v-for="item in e.hatesInJob">{{item}}</div>
+<!--                    <ul>-->
+<!--                      <li v-for="item in e.hatesInJob">{{item}}</li>-->
+<!--                    </ul>-->
                   </div>
                 </div>
               </div>

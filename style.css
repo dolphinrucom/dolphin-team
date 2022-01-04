@@ -1,13 +1,31 @@
-/*body {*/
-/*    background: linear-gradient(89.79deg, rgba(182, 69, 238, 0.92) 0.19%, rgba(114, 115, 245, 0.92) 83.8%, rgba(25, 175, 255, 0.92) 115.48%);*/
-/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    /*background: linear-gradient(89.79deg, rgba(182, 69, 238, 0.92) 0.19%, rgba(114, 115, 245, 0.92) 83.8%, rgba(25, 175, 255, 0.92) 115.48%);*/
+    font-family: 'Inter', sans-serif !important;
+}
+
+#header {
+    /*position: absolute;*/
+    width: 100%;
+    /*height: 1024px;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    color: white;
+    padding: 128px 0px;
+
+    background: radial-gradient(41.25% 53.16% at 54.86% 67.77%, #D943FF 0%, #5F13FF 100%);
+    border-radius: 0px;
+}
 
 .avatar img {
-    border-radius: 64px;
+    border-radius: 96px;
+    max-width: 192px;
+    max-height: 192px;
 }
 
 .products-logos {
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
 }
 
 .products-logos img {
@@ -22,17 +40,19 @@
 .telegram-link {
     display: block;
     float: left;
+    text-decoration: none;
+    color: #575757;
 }
 
-.telegram-link:before {
-    content: "";
-    line-height: 30px;
-    display: inline-block;
-    background: url("img/telegram.svg") no-repeat top right;
-    background-size: contain;
-    width: 16px;
-    height: 16px;
-}
+/*.telegram-link:before {*/
+/*    content: "";*/
+/*    line-height: 30px;*/
+/*    display: inline-block;*/
+/*    background: url("img/telegram.svg") no-repeat top right;*/
+/*    background-size: contain;*/
+/*    width: 16px;*/
+/*    height: 16px;*/
+/*}*/
 
 ul > li {
     margin-bottom: 8px;
@@ -41,3 +61,70 @@ ul > li {
 .card {
     height: 100%;
 }
+
+.title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 112.9%;
+    /* or 72px */
+    text-align: center;
+    letter-spacing: -0.011em;
+
+    color: #FFFFFF;
+}
+
+.subtitle {
+    /*margin-top: 16px;*/
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #E4E4E4;
+    line-height: 50px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.011em;
+}
+
+.grey-box {
+    background: #F5F5F5;
+    border-radius: 74px;
+    padding: 64px 32px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px 16px;
+}
+
+a[href^="https://"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}
+
+.card {
+    border-radius: 32px;
+    padding: 16px;
+    border: 0;
+}
+
+/*.card:nth-child(1n) {*/
+/*    background: #FFFFE9;*/
+/*}*/
+
+.second-line > div.col-12:nth-child(1n) > div.card {
+    background: #FFFFE9;
+}
+
+.second-line > div.col-12:nth-child(2n) > div.card {
+    background: #FDEBFF;
+}
+
+.second-line > div.col-12:nth-child(3n) > div.card {
+    background: #FFEBEB;
+}
+
+
